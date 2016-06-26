@@ -50,6 +50,9 @@ namespace TrainerApp
 		private Timer m_gameSearchTimer = null;
 		/// <summary>A set containing all the cheats the user has enabled in the trainer.</summary>
 		private HashSet<ECheat> m_enabledCheats = new HashSet<ECheat>();
+		/// <summary>The memory alteration responsible for tracking the player's HP variable's address.
+		/// This memory alteration which will be always active, once the trainer attaches to the game.</summary>
+		private MemoryAlterationX86Call m_memAlterationGetPtrPlayerHP;
 		#endregion
 
 
@@ -104,16 +107,19 @@ namespace TrainerApp
 		/// <param name="mainModuleAddress">The base address of the game's process' main module.</param>
 		private void RegisterMemoryAlterationSets( IntPtr mainModuleAddress )
 		{
-			// THIS METHOD IS CALLED AFTER THE INJECTION OF CODE/VARIABLES INTO THE GAME PROCESS' MEMORY SPACE.
-			// WRITE THE CODE WHICH REGISTER MEMORY ALTERATION SETS HERE.
+			// Manually activated memory alterations
+			m_memAlterationGetPtrPlayerHP = new MemoryAlterationX86Call( GameMemoryIO, mainModuleAddress + 0x157031, ECodeCave.evCodeCaveGetPtrPlayerHP, 8 );
+			m_memAlterationGetPtrPlayerHP.SetEnabled( GameMemoryInjector, true );
+
+			// Memory Alteration Sets
+			GameMemoryInjector.AddMemoryAlteration( ECheat.evCheatInfiniteBlueSouls, new MemoryAlterationX86Call( GameMemoryIO, mainModuleAddress + 0x154052, ECodeCave.evCodeCaveInfiniteBlueSouls, 8 ) );
 		}
 
 
 		/// <summary>Disables any Memory Alteration that is "always active" while the trainer is attached to the game.</summary>
 		private void DisableManuallyActivatedMemoryAlterations()
 		{
-			// THIS METHOD IS CALLED WHEN THE TRAINER GETS DETACHED FROM THE GAME'S PROCESS.
-			// WRITE THE CODE WHICH DISABLES ANY MEMORY ALTERATION THAT HAS BEEN MANUALLY ENABLED HERE.
+			m_memAlterationGetPtrPlayerHP.SetEnabled( GameMemoryInjector, false );
 		}
 
 
@@ -154,6 +160,35 @@ namespace TrainerApp
 							// Enable the cheats that the user has checked in the trainer's interface
 							foreach ( ECheat curEnabledCheat in m_enabledCheats )
 								GameMemoryInjector.SetMemoryAlterationsActive( curEnabledCheat, true );
+
+							// In DEBUG mode, print some debugging information that might be interesting when developing cheats
+							#if DEBUG
+								int longestCodeCaveNameLength = 0;
+								foreach ( ECodeCave curCodeCave in Enum.GetValues( typeof( ECodeCave ) ) )
+									longestCodeCaveNameLength = Math.Max( longestCodeCaveNameLength, curCodeCave.ToString().Length );
+
+								int longestVariableNameLength = 0;
+								foreach ( EVariable curVariable in Enum.GetValues( typeof( EVariable ) ) )
+									longestVariableNameLength = Math.Max( longestVariableNameLength, curVariable.ToString().Length );
+
+								Console.WriteLine( "[INJECTED: {0}]", DateTime.Now.ToString("yyyy-MM-dd HH':'mm':'ss") );
+								Console.WriteLine( "PID: {0}", GameMemoryIO.TargetProcess.Id.ToString( "X8" ) );
+								Console.WriteLine( "Main Module: {0} (base address: 0x{1})", GameMemoryIO.TargetProcess.MainModule.ModuleName, mainModuleAddress.ToString( "X8" ) );
+
+								Console.WriteLine( "Injected CODE CAVES:" );
+								foreach ( ECodeCave curCodeCave in Enum.GetValues( typeof( ECodeCave ) ) )
+									Console.WriteLine( "   {0}: 0x{1}",
+										curCodeCave.ToString().PadLeft( longestCodeCaveNameLength ),
+										GameMemoryInjector.GetInjectedCodeCaveAddress( curCodeCave ).ToString( "X8" ) );
+
+								Console.WriteLine( "Injected VARIABLES:" );
+								foreach ( EVariable curVariable in Enum.GetValues( typeof( EVariable ) ) )
+									Console.WriteLine( "   {0}: 0x{1}",
+										curVariable.ToString().PadLeft( longestVariableNameLength ),
+										GameMemoryInjector.GetInjectedVariableAddress( curVariable ).ToString( "X8" ) );
+
+								Console.WriteLine();
+							#endif
 
 							// The timer which looks for the game shouldn't be restarted, as the game has already been found
 							bRestartLookForGameTimer = false;
