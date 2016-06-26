@@ -112,6 +112,7 @@ namespace TrainerApp
 			m_memAlterationGetPtrPlayerHP.SetEnabled( GameMemoryInjector, true );
 
 			// Memory Alteration Sets
+			GameMemoryInjector.AddMemoryAlteration( ECheat.evCheatInfiniteHP, new MemoryAlterationX86Call( GameMemoryIO, mainModuleAddress + 0x35D895, ECodeCave.evCodeCaveInfiniteHP, 8 ) );
 			GameMemoryInjector.AddMemoryAlteration( ECheat.evCheatInfiniteBlueSouls, new MemoryAlterationX86Call( GameMemoryIO, mainModuleAddress + 0x154052, ECodeCave.evCodeCaveInfiniteBlueSouls, 8 ) );
 		}
 
