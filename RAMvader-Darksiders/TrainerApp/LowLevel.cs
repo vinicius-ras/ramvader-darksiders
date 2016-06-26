@@ -26,8 +26,10 @@ namespace TrainerApp
 	/// <summary>Identifiers for all cheats available in the trainer.</summary>
 	public enum ECheat
 	{
-		/// <summary>Identifier for the "example" cheat.</summary>
-		evCheatExample,
+		/// <summary>Identifier for the "Infinite Blue Souls" cheat.</summary>
+		evCheatInfiniteHP,
+		/// <summary>Identifier for the "Infinite Blue Souls" cheat.</summary>
+		evCheatInfiniteBlueSouls,
 	}
 
 
@@ -38,9 +40,12 @@ namespace TrainerApp
 	/// once the trainer gets attached to the game.</summary>
 	public enum ECodeCave
 	{
-		/// <summary>Identifier for the "example" code cave.</summary>
-		[CodeCaveDefinition( 0x50, 0x31, 0xC0, 0x89, 0x05, EVariable.evVarExample, 0x58, 0xC3 )]
-		evCodeCaveExample,
+		/// <summary>Identifier for the code cave which keeps track of the player's HP variable's address.</summary>
+		[CodeCaveDefinition( 0x52, 0x8D, 0x90, 0x00, 0x01, 0x00, 0x00, 0x89, 0x15, EVariable.evVarPtrPlayerHP, 0x5A, 0xF3, 0x0F, 0x10, 0x80, 0x00, 0x01, 0x00, 0x00, 0xC3 )]
+		evCodeCaveGetPtrPlayerHP,
+		/// <summary>Identifier for the "Infinite Blue Souls" code cave.</summary>
+		[CodeCaveDefinition( 0x50, 0xB8, 0x2A, 0x2C, 0x0A, 0x00, 0x50, 0xDB, 0x04, 0x24, 0x58, 0xD9, 0x9E, 0x54, 0x06, 0x00, 0x00, 0x58, 0xF3, 0x0F, 0x10, 0x86, 0x54, 0x06, 0x00, 0x00, 0xC3 )]
+		evCodeCaveInfiniteBlueSouls,
 	}
 
 
@@ -51,8 +56,8 @@ namespace TrainerApp
 	/// once the trainer gets attached to the game.</summary>
 	public enum EVariable
 	{
-		/// <summary>Identifies an example of variable.</summary>
-		[VariableDefinition( (UInt32) 123 )]
-		evVarExample,
+		/// <summary>Identifies the variable which keeps the pointer to the player's HP variable.</summary>
+		[VariableDefinition( (UInt32) 0 )]
+		evVarPtrPlayerHP,
 	}
 }
