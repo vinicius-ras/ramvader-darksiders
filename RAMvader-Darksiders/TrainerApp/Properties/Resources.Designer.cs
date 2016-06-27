@@ -61,6 +61,15 @@ namespace TrainerApp.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to kill enemies with a single hit..
+        /// </summary>
+        public static string strChkCheatDescriptionEasyKills {
+            get {
+                return ResourceManager.GetString("strChkCheatDescriptionEasyKills", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to receive infinite Blue Souls to buy anything with Vulgrin!.
         /// </summary>
         public static string strChkCheatDescriptionInfiniteBlueSouls {
@@ -75,6 +84,15 @@ namespace TrainerApp.Properties {
         public static string strChkCheatDescriptionInfiniteHP {
             get {
                 return ResourceManager.GetString("strChkCheatDescriptionInfiniteHP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Easy kills:.
+        /// </summary>
+        public static string strChkCheatPromptEasyKills {
+            get {
+                return ResourceManager.GetString("strChkCheatPromptEasyKills", resourceCulture);
             }
         }
         
