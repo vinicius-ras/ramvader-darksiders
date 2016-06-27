@@ -88,6 +88,15 @@ namespace TrainerApp.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to have unlimited Wrath to use War&apos;s special powers at any time!.
+        /// </summary>
+        public static string strChkCheatDescriptionInfiniteWrath {
+            get {
+                return ResourceManager.GetString("strChkCheatDescriptionInfiniteWrath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Easy kills:.
         /// </summary>
         public static string strChkCheatPromptEasyKills {
@@ -111,6 +120,15 @@ namespace TrainerApp.Properties {
         public static string strChkCheatPromptInfiniteHP {
             get {
                 return ResourceManager.GetString("strChkCheatPromptInfiniteHP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Infinite Wrath:.
+        /// </summary>
+        public static string strChkCheatPromptInfiniteWrath {
+            get {
+                return ResourceManager.GetString("strChkCheatPromptInfiniteWrath", resourceCulture);
             }
         }
         

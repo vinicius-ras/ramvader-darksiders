@@ -115,6 +115,7 @@ namespace TrainerApp
 			GameMemoryInjector.AddMemoryAlteration( ECheat.evCheatInfiniteHP, new MemoryAlterationX86Call( GameMemoryIO, mainModuleAddress + 0x35D895, ECodeCave.evCodeCaveInfiniteHP, 8 ) );
 			GameMemoryInjector.AddMemoryAlteration( ECheat.evCheatInfiniteBlueSouls, new MemoryAlterationX86Call( GameMemoryIO, mainModuleAddress + 0x154052, ECodeCave.evCodeCaveInfiniteBlueSouls, 8 ) );
 			GameMemoryInjector.AddMemoryAlteration( ECheat.evCheatEasyKills, new MemoryAlterationX86Call( GameMemoryIO, mainModuleAddress + 0x35D90D, ECodeCave.evCodeCaveEasyKill, 8 ) );
+			GameMemoryInjector.AddMemoryAlteration( ECheat.evCheatInfiniteWrath, new MemoryAlterationX86Call( GameMemoryIO, mainModuleAddress + 0x157189, ECodeCave.evCodeCaveInfiniteWrath, 5 ) );
 		}
 
 

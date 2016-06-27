@@ -126,6 +126,9 @@
   <data name="strChkCheatDescriptionInfiniteHP" xml:space="preserve">
     <value>player's Health Points are frozen.</value>
   </data>
+  <data name="strChkCheatDescriptionInfiniteWrath" xml:space="preserve">
+    <value>have unlimited Wrath to use War's special powers at any time!</value>
+  </data>
   <data name="strChkCheatPromptEasyKills" xml:space="preserve">
     <value>Easy kills:</value>
   </data>
@@ -134,6 +137,9 @@
   </data>
   <data name="strChkCheatPromptInfiniteHP" xml:space="preserve">
     <value>Infinite HP:</value>
+  </data>
+  <data name="strChkCheatPromptInfiniteWrath" xml:space="preserve">
+    <value>Infinite Wrath:</value>
   </data>
   <data name="strGroupBoxHeaderCheats" xml:space="preserve">
     <value>Available hacks</value>

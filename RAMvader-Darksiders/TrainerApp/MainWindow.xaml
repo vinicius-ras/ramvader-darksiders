@@ -109,6 +109,10 @@
 					<CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptEasyKills}" Tag="{x:Static local:ECheat.evCheatEasyKills}" />
 					<Label Content="{x:Static props:Resources.strChkCheatDescriptionEasyKills}" Margin="3" />
 				</StackPanel>
+				<StackPanel Orientation="Horizontal">
+					<CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptInfiniteWrath}" Tag="{x:Static local:ECheat.evCheatInfiniteWrath}" />
+					<Label Content="{x:Static props:Resources.strChkCheatDescriptionInfiniteWrath}" Margin="3" />
+				</StackPanel>
 			</StackPanel>
 		</GroupBox>
 		<GroupBox Header="{x:Static props:Resources.strGroupBoxHeaderSupport}" Margin="3" FontWeight="Bold">
