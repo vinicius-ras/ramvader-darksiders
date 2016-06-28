@@ -61,6 +61,15 @@ namespace TrainerApp.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to hit any enemy with the Chaoseater (War&apos;s main sword) and it will level-up to its maximum level instantaneously!.
+        /// </summary>
+        public static string strChkCheatDescriptionChaoseaterEasyLevelUp {
+            get {
+                return ResourceManager.GetString("strChkCheatDescriptionChaoseaterEasyLevelUp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to kill enemies with a single hit..
         /// </summary>
         public static string strChkCheatDescriptionEasyKills {
@@ -93,6 +102,15 @@ namespace TrainerApp.Properties {
         public static string strChkCheatDescriptionInfiniteWrath {
             get {
                 return ResourceManager.GetString("strChkCheatDescriptionInfiniteWrath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chaoseater Easy Level-Up:.
+        /// </summary>
+        public static string strChkCheatPromptChaoseaterEasyLevelUp {
+            get {
+                return ResourceManager.GetString("strChkCheatPromptChaoseaterEasyLevelUp", resourceCulture);
             }
         }
         

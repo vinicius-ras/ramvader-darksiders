@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="strChkCheatDescriptionChaoseaterEasyLevelUp" xml:space="preserve">
+    <value>hit any enemy with the Chaoseater (War's main sword) and it will level-up to its maximum level instantaneously!</value>
+  </data>
   <data name="strChkCheatDescriptionEasyKills" xml:space="preserve">
     <value>kill enemies with a single hit.</value>
   </data>
@@ -128,6 +131,9 @@
   </data>
   <data name="strChkCheatDescriptionInfiniteWrath" xml:space="preserve">
     <value>have unlimited Wrath to use War's special powers at any time!</value>
+  </data>
+  <data name="strChkCheatPromptChaoseaterEasyLevelUp" xml:space="preserve">
+    <value>Chaoseater Easy Level-Up:</value>
   </data>
   <data name="strChkCheatPromptEasyKills" xml:space="preserve">
     <value>Easy kills:</value>
