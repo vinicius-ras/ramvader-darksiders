@@ -25,7 +25,7 @@
 		xmlns:props="clr-namespace:TrainerApp.Properties"
         mc:Ignorable="d"
 		DataContext="{Binding RelativeSource={RelativeSource Self}}"
-        Title="{x:Static props:Resources.strMainWindowTitle}" Height="350" Width="820"
+        Title="{x:Static props:Resources.strMainWindowTitle}" Height="400" Width="820"
 		SizeToContent="Height"
 		Icon="/media/icon.ico"
 		Closing="WindowClosing">
@@ -114,8 +114,12 @@
 					<Label Content="{x:Static props:Resources.strChkCheatDescriptionInfiniteWrath}" Margin="3" />
 				</StackPanel>
 				<StackPanel Orientation="Horizontal">
-					<CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptChaoseaterEasyLevelUp}" Tag="{x:Static local:ECheat.evCheatChaoseaterEasyLevelUp}" />
-					<Label Content="{x:Static props:Resources.strChkCheatDescriptionChaoseaterEasyLevelUp}" Margin="3" />
+					<CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptWeaponsEasyLevelUp}" Tag="{x:Static local:ECheat.evCheatWeaponsEasyLevelUp}" />
+					<Label Content="{x:Static props:Resources.strChkCheatDescriptionWeaponsEasyLevelUp}" Margin="3" />
+				</StackPanel>
+				<StackPanel Orientation="Horizontal">
+					<CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptEasyChaosForm}" Tag="{x:Static local:ECheat.evCheatEasyChaosForm}" />
+					<Label Content="{x:Static props:Resources.strChkCheatDescriptionEasyChaosForm}" Margin="3" />
 				</StackPanel>
 			</StackPanel>
 		</GroupBox>
