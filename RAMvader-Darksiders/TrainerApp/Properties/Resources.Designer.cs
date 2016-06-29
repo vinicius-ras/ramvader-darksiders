@@ -61,11 +61,11 @@ namespace TrainerApp.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to hit any enemy with the Chaoseater (War&apos;s main sword) and it will level-up to its maximum level instantaneously!.
+        ///   Looks up a localized string similar to a single hit in any enemy will fill the Chaos Bar and enable you to use the Chaos Form..
         /// </summary>
-        public static string strChkCheatDescriptionChaoseaterEasyLevelUp {
+        public static string strChkCheatDescriptionEasyChaosForm {
             get {
-                return ResourceManager.GetString("strChkCheatDescriptionChaoseaterEasyLevelUp", resourceCulture);
+                return ResourceManager.GetString("strChkCheatDescriptionEasyChaosForm", resourceCulture);
             }
         }
         
@@ -79,7 +79,7 @@ namespace TrainerApp.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to receive infinite Blue Souls to buy anything with Vulgrin!.
+        ///   Looks up a localized string similar to receive infinite Blue Souls to buy anything with Vulgrim!.
         /// </summary>
         public static string strChkCheatDescriptionInfiniteBlueSouls {
             get {
@@ -106,11 +106,20 @@ namespace TrainerApp.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Chaoseater Easy Level-Up:.
+        ///   Looks up a localized string similar to hit any enemy with a weapon, and that weapon will level-up to its maximum level instantaneously!.
         /// </summary>
-        public static string strChkCheatPromptChaoseaterEasyLevelUp {
+        public static string strChkCheatDescriptionWeaponsEasyLevelUp {
             get {
-                return ResourceManager.GetString("strChkCheatPromptChaoseaterEasyLevelUp", resourceCulture);
+                return ResourceManager.GetString("strChkCheatDescriptionWeaponsEasyLevelUp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Easy Chaos Form:.
+        /// </summary>
+        public static string strChkCheatPromptEasyChaosForm {
+            get {
+                return ResourceManager.GetString("strChkCheatPromptEasyChaosForm", resourceCulture);
             }
         }
         
@@ -147,6 +156,15 @@ namespace TrainerApp.Properties {
         public static string strChkCheatPromptInfiniteWrath {
             get {
                 return ResourceManager.GetString("strChkCheatPromptInfiniteWrath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Weapons Easy Level-Up:.
+        /// </summary>
+        public static string strChkCheatPromptWeaponsEasyLevelUp {
+            get {
+                return ResourceManager.GetString("strChkCheatPromptWeaponsEasyLevelUp", resourceCulture);
             }
         }
         

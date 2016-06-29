@@ -34,8 +34,10 @@ namespace TrainerApp
 		evCheatEasyKills,
 		/// <summary>Identifier for the "Infinite Wrath" cheat.</summary>
 		evCheatInfiniteWrath,
-		/// <summary>Identifier for the "Chaoseater Easy Level-Up" cheat.</summary>
-		evCheatChaoseaterEasyLevelUp,
+		/// <summary>Identifier for the "Weapons Easy Level-Up" cheat.</summary>
+		evCheatWeaponsEasyLevelUp,
+		/// <summary>Identifier for the "Easy Chaos Form" cheat.</summary>
+		evCheatEasyChaosForm,
 	}
 
 
@@ -65,9 +67,12 @@ namespace TrainerApp
 		/// <summary>Identifier for the code cave used for the "Infinite Wrath" cheat.</summary>
 		[CodeCaveDefinition( 0x50, 0x31, 0xC0, 0x66, 0xB8, 0x4C, 0x04, 0x50, 0xDB, 0x04, 0x24, 0x58, 0xD9, 0x5E, 0x04, 0x58, 0xF3, 0x0F, 0x10, 0x46, 0x04, 0xC3 )]
 		evCodeCaveInfiniteWrath,
-		/// <summary>Identifier for the code cave used for the "Chaoseater Easy Level-Up" cheat.</summary>
+		/// <summary>Identifier for the code cave used for the "Weapons Easy Level-Up" cheat.</summary>
 		[CodeCaveDefinition( 0x68, 0x3F, 0x42, 0x0F, 0x00, 0xDB, 0x04, 0x24, 0x83, 0xC4, 0x04, 0xD9, 0x9F, 0x48, 0x01, 0x00, 0x00, 0xF3, 0x0F, 0x58, 0x8F, 0x48, 0x01, 0x00, 0x00, 0xC3 )]
-		evCodeCaveChaoseaterEasyLevelUp,
+		evCodeCaveWeaponsEasyLevelUp,
+		/// <summary>Identifier for the code cave used for the "Easy Chaos Form" cheat.</summary>
+		[CodeCaveDefinition( 0x68, 0xE8, 0x03, 0x00, 0x00, 0xDB, 0x04, 0x24, 0x83, 0xC4, 0x04, 0xD9, 0x5E, 0x08, 0xF3, 0x0F, 0x10, 0x46, 0x08, 0xC3 )]
+		evCodeCaveEasyChaosForm,
 	}
 
 

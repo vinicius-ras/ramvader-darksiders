@@ -117,14 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="strChkCheatDescriptionChaoseaterEasyLevelUp" xml:space="preserve">
-    <value>hit any enemy with the Chaoseater (War's main sword) and it will level-up to its maximum level instantaneously!</value>
+  <data name="strChkCheatDescriptionEasyChaosForm" xml:space="preserve">
+    <value>a single hit in any enemy will fill the Chaos Bar and enable you to use the Chaos Form.</value>
   </data>
   <data name="strChkCheatDescriptionEasyKills" xml:space="preserve">
     <value>kill enemies with a single hit.</value>
   </data>
   <data name="strChkCheatDescriptionInfiniteBlueSouls" xml:space="preserve">
-    <value>receive infinite Blue Souls to buy anything with Vulgrin!</value>
+    <value>receive infinite Blue Souls to buy anything with Vulgrim!</value>
   </data>
   <data name="strChkCheatDescriptionInfiniteHP" xml:space="preserve">
     <value>player's Health Points are frozen.</value>
@@ -132,8 +132,11 @@
   <data name="strChkCheatDescriptionInfiniteWrath" xml:space="preserve">
     <value>have unlimited Wrath to use War's special powers at any time!</value>
   </data>
-  <data name="strChkCheatPromptChaoseaterEasyLevelUp" xml:space="preserve">
-    <value>Chaoseater Easy Level-Up:</value>
+  <data name="strChkCheatDescriptionWeaponsEasyLevelUp" xml:space="preserve">
+    <value>hit any enemy with a weapon, and that weapon will level-up to its maximum level instantaneously!</value>
+  </data>
+  <data name="strChkCheatPromptEasyChaosForm" xml:space="preserve">
+    <value>Easy Chaos Form:</value>
   </data>
   <data name="strChkCheatPromptEasyKills" xml:space="preserve">
     <value>Easy kills:</value>
@@ -146,6 +149,9 @@
   </data>
   <data name="strChkCheatPromptInfiniteWrath" xml:space="preserve">
     <value>Infinite Wrath:</value>
+  </data>
+  <data name="strChkCheatPromptWeaponsEasyLevelUp" xml:space="preserve">
+    <value>Weapons Easy Level-Up:</value>
   </data>
   <data name="strGroupBoxHeaderCheats" xml:space="preserve">
     <value>Available hacks</value>
