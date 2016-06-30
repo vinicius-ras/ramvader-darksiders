@@ -38,6 +38,8 @@ namespace TrainerApp
 		evCheatWeaponsEasyLevelUp,
 		/// <summary>Identifier for the "Easy Chaos Form" cheat.</summary>
 		evCheatEasyChaosForm,
+		/// <summary>Identifier for the "Infinite Ruin's sprints" cheat.</summary>
+		evCheatInfiniteRuinSprints,
 	}
 
 
@@ -73,6 +75,9 @@ namespace TrainerApp
 		/// <summary>Identifier for the code cave used for the "Easy Chaos Form" cheat.</summary>
 		[CodeCaveDefinition( 0x68, 0xE8, 0x03, 0x00, 0x00, 0xDB, 0x04, 0x24, 0x83, 0xC4, 0x04, 0xD9, 0x5E, 0x08, 0xF3, 0x0F, 0x10, 0x46, 0x08, 0xC3 )]
 		evCodeCaveEasyChaosForm,
+		/// <summary>Identifier for the code cave used for the "Infinite Ruin's sprints" cheat.</summary>
+		[CodeCaveDefinition( 0x6A, 0x05, 0x8F, 0x80, 0x0C, 0x05, 0x00, 0x00, 0x8B, 0x80, 0x0C, 0x05, 0x00, 0x00, 0xC3 )]
+		evCodeCaveInfiniteRuinSprints,
 	}
 
 

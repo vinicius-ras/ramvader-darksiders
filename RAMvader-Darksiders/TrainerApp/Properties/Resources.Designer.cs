@@ -97,6 +97,15 @@ namespace TrainerApp.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to you can make your horse sprint unlimitedly!.
+        /// </summary>
+        public static string strChkCheatDescriptionInfiniteRuinSprints {
+            get {
+                return ResourceManager.GetString("strChkCheatDescriptionInfiniteRuinSprints", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to have unlimited Wrath to use War&apos;s special powers at any time!.
         /// </summary>
         public static string strChkCheatDescriptionInfiniteWrath {
@@ -147,6 +156,15 @@ namespace TrainerApp.Properties {
         public static string strChkCheatPromptInfiniteHP {
             get {
                 return ResourceManager.GetString("strChkCheatPromptInfiniteHP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Infinite Ruin&apos;s sprints:.
+        /// </summary>
+        public static string strChkCheatPromptInfiniteRuinSprints {
+            get {
+                return ResourceManager.GetString("strChkCheatPromptInfiniteRuinSprints", resourceCulture);
             }
         }
         
