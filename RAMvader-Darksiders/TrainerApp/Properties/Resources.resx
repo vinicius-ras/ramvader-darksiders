@@ -129,6 +129,9 @@
   <data name="strChkCheatDescriptionInfiniteHP" xml:space="preserve">
     <value>player's Health Points are frozen.</value>
   </data>
+  <data name="strChkCheatDescriptionInfiniteRuinSprints" xml:space="preserve">
+    <value>you can make your horse sprint unlimitedly!</value>
+  </data>
   <data name="strChkCheatDescriptionInfiniteWrath" xml:space="preserve">
     <value>have unlimited Wrath to use War's special powers at any time!</value>
   </data>
@@ -146,6 +149,9 @@
   </data>
   <data name="strChkCheatPromptInfiniteHP" xml:space="preserve">
     <value>Infinite HP:</value>
+  </data>
+  <data name="strChkCheatPromptInfiniteRuinSprints" xml:space="preserve">
+    <value>Infinite Ruin's sprints:</value>
   </data>
   <data name="strChkCheatPromptInfiniteWrath" xml:space="preserve">
     <value>Infinite Wrath:</value>
